@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, View, Text, TextInput, StyleSheet, TouchableOpacity, Button } from 'react-native';
 
-class SizeSurvey extends Component {
+class SizeSurvey2 extends Component {
 
   static navigationOptions = {
     title: 'Form',
@@ -10,22 +10,22 @@ class SizeSurvey extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Size Survey</Text>
+        <Text>Size Survey2</Text>
         <TextInput
           style={styles.input}
-          placeholder="Loose Underbust"
+          placeholder="Standing Bust"
         />
         <TextInput
           style={styles.input}
-          placeholder="Snug Underbust"
+          placeholder="Leaning Bust"
         />
         <TextInput
           style={styles.input}
-          placeholder="Tight Underbust"
+          placeholder="Lying Bust"
         />
         <Button
-          title="Next"
-          onPress={() => this.props.navigation.navigate('Form2')}
+          title="Next!"
+          onPress={() => this.props.navigation.navigate('Form3')}
         />
       </View>
     )
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default SizeSurvey;
+export default SizeSurvey2;
