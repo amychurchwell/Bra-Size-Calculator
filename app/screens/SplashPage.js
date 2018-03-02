@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Platform, View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
-class SizeSurvey extends Component {
+class SplashPage extends Component {
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text>Size Survey</Text>
+        <Text>SplashPage</Text>
       </View>
     )
   }
@@ -23,4 +24,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default SizeSurvey;
+export default SplashPage;

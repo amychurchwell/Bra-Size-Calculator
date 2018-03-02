@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
+import { View, Text, StyleSheet, ActivityIndicator, Platform, ListView, Keyboard, AsyncStorage } from "react-native";
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+  StackNavigator,
+} from 'react-navigation';
 
 import Header from "./header";
 import Footer from "./footer";
+import SplashPage from "./app/screens/SplashPage";
+import SizeSurvey from "./app/screens/SizeSurvey";
 
-type Props = {};
 class App extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Header />
-        <Text style={styles.welcome}>
-          Welcome to Bra Size Calculator!
-        </Text>
         <Footer />
       </View>
     );
@@ -30,6 +26,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    ...Platform.select({
+      ios: { paddingTop: 30 }
+    })
   }
 })
-export default App;
+
+export default StackNavigator({
+  Home: {
+    screen: SplashPage,
+  },
+});
