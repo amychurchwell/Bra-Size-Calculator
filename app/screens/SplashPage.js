@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Platform, View, Text, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native';
 
 class SplashPage extends Component {
+  
+  static navigationOptions = {
+    title: 'Home',
+  };
+
   render() {
     const { navigate } = this.props.navigation;
     return (

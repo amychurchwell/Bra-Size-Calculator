@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { Platform, View, Text, TextInput, StyleSheet, TouchableOpacity, Button } from 'react-native';
 
 class SizeSurvey extends Component {
+
+  static navigationOptions = {
+    title: 'Form',
+  };
+
   render() {
     return (
       <View style={styles.container}>
         <Text>Size Survey</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Size1"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Size2"
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Size3"
+        />
+        <Button
+          title="Next"
+        />
       </View>
     )
   }
@@ -21,6 +41,8 @@ const styles = StyleSheet.create({
       ios: { paddingTop: 30 }
     })
   },
+  input: {
+  }
 })
 
 export default SizeSurvey;
