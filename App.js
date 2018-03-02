@@ -10,6 +10,7 @@ import SplashPage from "./app/screens/SplashPage";
 import SizeSurvey from "./app/screens/SizeSurvey";
 import SizeSurvey2 from "./app/screens/SizeSurvey2";
 import SizeSurvey3 from "./app/screens/SizeSurvey3";
+import Results from "./app/screens/Results";
 
 const RootStack = StackNavigator(
   {
@@ -24,7 +25,10 @@ const RootStack = StackNavigator(
     },
     Form3: {
       screen: SizeSurvey3,
-    }
+    },
+    Results: {
+      screen: Results,
+    },
   },
   {
     initialRouteName: 'Home',

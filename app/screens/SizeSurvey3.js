@@ -25,6 +25,7 @@ class SizeSurvey3 extends Component {
         />
         <Button
           title="Submit!"
+          onPress={() => this.props.navigation.navigate('Results')}
         />
       </View>
     )
