@@ -9,14 +9,23 @@ import Footer from "./footer";
 import SplashPage from "./app/screens/SplashPage";
 import SizeSurvey from "./app/screens/SizeSurvey";
 
-class App extends Component {
+const RootStack = StackNavigator(
+  {
+    Home: {
+      screen: SplashPage,
+    },
+    Form: {
+      screen: SizeSurvey,
+    },
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+export default class App extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Header />
-        <Footer />
-      </View>
-    );
+    return <RootStack />;
   }
 }
 
@@ -31,9 +40,3 @@ const styles = StyleSheet.create({
     })
   }
 })
-
-export default StackNavigator({
-  Home: {
-    screen: SplashPage,
-  },
-});

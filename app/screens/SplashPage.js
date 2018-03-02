@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { Platform, View, Text, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native';
 
 class SplashPage extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text>SplashPage</Text>
+        <Text>Welcome to Bra Size Calculator!</Text>
+        <Button
+          title="Go to Form"
+          onPress={() => this.props.navigation.navigate('Form')}
+        />
       </View>
     )
   }
