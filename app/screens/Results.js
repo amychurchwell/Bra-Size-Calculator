@@ -7,7 +7,7 @@ class Results extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text>Results!</Text>
+        <Text style={styles.title}>Your suggested size(s):</Text>
       </View>
     )
   }
@@ -18,11 +18,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#fbe9e7',
     ...Platform.select({
       ios: { paddingTop: 30 }
     })
   },
+  title: {
+    flex: 1,
+    fontSize: 30,
+  }
 })
 
 export default Results;

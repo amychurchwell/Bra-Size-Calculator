@@ -10,7 +10,7 @@ class SizeSurvey2 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Size Survey2</Text>
+        <Text style={styles.title}>Size Survey2</Text>
         <TextInput
           style={styles.input}
           placeholder="Standing Bust"
@@ -25,6 +25,7 @@ class SizeSurvey2 extends Component {
         />
         <Button
           title="Next!"
+          color="#4b2c20"
           onPress={() => this.props.navigation.navigate('Form3')}
         />
       </View>
@@ -42,7 +43,12 @@ const styles = StyleSheet.create({
       ios: { paddingTop: 30 }
     })
   },
+  title: {
+    fontSize: 35,
+    color: '#c8b7b5',
+  },
   input: {
+    margin: 10,
   }
 })
 

@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, Platform, ListView, Keyboard, AsyncStorage } from "react-native";
+
+import {
+  View,
+  Text,
+  StyleSheet,
+  ActivityIndicator,
+  Platform,
+  ListView,
+  Keyboard,
+ } from "react-native";
+
 import {
   StackNavigator,
 } from 'react-navigation';
@@ -36,6 +46,7 @@ const RootStack = StackNavigator(
 );
 
 export default class App extends React.Component {
+
   render() {
     return <RootStack />;
   }

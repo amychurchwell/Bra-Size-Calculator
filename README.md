@@ -46,7 +46,7 @@ $ react-native run-ios
 
 ## Layout
 
-![landing page](https://raw.githubusercontent.com/amychurchwell/Bra-Size-Calculator/master/src/assets/landingpage_mockup.png)
+![landing page](https://raw.githubusercontent.com/amychurchwell/Bra-Size-Calculator/master/app/assets/landingpage_mockup.png)
 
 :pushpin: **v.2**: Utilized Adobe XD to create more detailed layout views.
 
@@ -54,7 +54,7 @@ $ react-native run-ios
 
 ## Component Tree
 
-![component tree](https://raw.githubusercontent.com/amychurchwell/Bra-Size-Calculator/master/src/assets/componenttree_v2.png)
+![component tree](https://raw.githubusercontent.com/amychurchwell/Bra-Size-Calculator/master/app/assets/componenttree_v2.png)
 
 :pushpin: **v.2**: Reconsidered component tree without state for now. Results is no longer a child component of (newly renamed) SizeSurvey even though they will share information.
 
