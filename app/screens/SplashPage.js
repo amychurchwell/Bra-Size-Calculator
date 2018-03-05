@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
   Button } from 'react-native';
 
+import {RkButton} from 'react-native-ui-kitten';
+
 class SplashPage extends Component {
 
   static navigationOptions = {
@@ -22,11 +24,10 @@ class SplashPage extends Component {
         <Image source={require('./../assets/bra.png')} />
         <Text style={styles.title}>I need help finding out my bra size.</Text>
         <Text style={styles.content}>Welcome to bra size calculator! A react native application created by Amy.</Text>
-        <Button
-          title="Let's go!"
-          color="#4b2c20"
-          onPress={() => this.props.navigation.navigate('Form')}
-        />
+        <RkButton
+          onPress={() => this.props.navigation.navigate('Form')}>
+          Let's go!
+        </RkButton>
       </View>
     )
   }

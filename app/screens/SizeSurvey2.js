@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, TextInput, StyleSheet, TouchableOpacity, Button } from 'react-native';
+import { Platform, View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
+import {RkButton} from 'react-native-ui-kitten';
 
 class SizeSurvey2 extends Component {
 
@@ -23,11 +24,10 @@ class SizeSurvey2 extends Component {
           style={styles.input}
           placeholder="Lying Bust"
         />
-        <Button
-          title="Next!"
-          color="#4b2c20"
-          onPress={() => this.props.navigation.navigate('Form3')}
-        />
+        <RkButton
+          onPress={() => this.props.navigation.navigate('Form3')}>
+          Next!
+        </RkButton>
       </View>
     )
   }

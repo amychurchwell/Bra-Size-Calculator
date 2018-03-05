@@ -22,6 +22,12 @@ import SizeSurvey2 from "./app/screens/SizeSurvey2";
 import SizeSurvey3 from "./app/screens/SizeSurvey3";
 import Results from "./app/screens/Results";
 
+import {RkTheme} from 'react-native-ui-kitten';
+
+RkTheme.setType('RkButton', 'basic', {
+    backgroundColor: '#4b2c20'
+  });
+
 const RootStack = StackNavigator(
   {
     Home: {
