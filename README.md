@@ -54,9 +54,11 @@ $ react-native run-ios
 
 ## Component Tree
 
-![component tree](https://raw.githubusercontent.com/amychurchwell/Bra-Size-Calculator/master/app/assets/componenttree_v2.png)
+![component tree](https://raw.githubusercontent.com/amychurchwell/Bra-Size-Calculator/master/app/assets/componenttree_v3.png)
 
-:pushpin: **v.2**: Reconsidered component tree without state for now. Results is no longer a child component of (newly renamed) SizeSurvey even though they will share information.
+:pushpin: **v.3**: Components highlighted in yellow represent those affected by state.
+
+**v.2**: Reconsidered component tree without state for now. Results is no longer a child component of (newly renamed) SizeSurvey even though they will share information.
 
 **v.1**: Components that require state have been highlighted in red. This tree will be edited going forward, something tells me it's a little off.
 

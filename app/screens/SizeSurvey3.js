@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, TextInput, StyleSheet, TouchableOpacity, Button } from 'react-native';
+import { Platform, View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
 
 import {RkButton} from 'react-native-ui-kitten';
 
@@ -13,18 +13,6 @@ class SizeSurvey3 extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Size Survey3</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Sizing System"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Units"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="?"
-        />
         <RkButton
           onPress={() => this.props.navigation.navigate('Results')}>
           Submit!

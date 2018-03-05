@@ -6,10 +6,7 @@ import {RkButton} from 'react-native-ui-kitten';
 class SizeSurvey extends Component {
   constructor(props){
     super(props);
-    this.state = {
-      isLoading: false,
-      error: false
-    };
+    console.log(props);
   }
 
   static navigationOptions = {

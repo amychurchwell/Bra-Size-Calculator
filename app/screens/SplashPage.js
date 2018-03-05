@@ -12,7 +12,6 @@ import {
 import {RkButton} from 'react-native-ui-kitten';
 
 class SplashPage extends Component {
-
   static navigationOptions = {
     title: 'Home',
   };
@@ -27,6 +26,10 @@ class SplashPage extends Component {
         <RkButton
           onPress={() => this.props.navigation.navigate('Form')}>
           Let's go!
+        </RkButton>
+        <RkButton
+          onPress={() => this.props.navigation.navigate('Results')}>
+          Results.
         </RkButton>
       </View>
     )
