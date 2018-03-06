@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { Platform, View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {RkButton} from 'react-native-ui-kitten';
+import {RkButton, RkTextInput} from 'react-native-ui-kitten';
 
 class SizeSurvey2 extends Component {
+    constructor(props){
+      super(props);
+      console.log(props + "2");
+    }
 
   static navigationOptions = {
     title: 'Form',
@@ -11,7 +15,9 @@ class SizeSurvey2 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Size Survey2</Text>
+        <RkTextInput placeholder='Loose Underbust'/>
+        <RkTextInput placeholder='Snug Underbust'/>
+        <RkTextInput placeholder='Tight Underbust'/>
         <RkButton
           onPress={() => this.props.navigation.navigate('Form3')}>
           Next!
@@ -30,13 +36,6 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: { paddingTop: 30 }
     })
-  },
-  title: {
-    fontSize: 35,
-    color: '#c8b7b5',
-  },
-  input: {
-    margin: 10,
   }
 })
 

@@ -4,6 +4,10 @@ import { Platform, View, Text, StyleSheet, TextInput, TouchableOpacity, Button }
 import {RkCard} from 'react-native-ui-kitten';
 
 class Results extends Component {
+    constructor(props){
+      super(props);
+      console.log(props);
+    }
 
   render() {
     const { navigate } = this.props.navigation;
@@ -14,7 +18,7 @@ class Results extends Component {
             <Text>Your suggested size:</Text>
           </View>
           <View rkCardContent>
-            <Text> quick brown fox jumps over the lazy dog</Text>
+            <Text>props go here</Text>
           </View>
         </RkCard>
       </View>
