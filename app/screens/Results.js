@@ -18,7 +18,7 @@ class Results extends Component {
             <Text>Your suggested size:</Text>
           </View>
           <View rkCardContent>
-            <Text>props go here</Text>
+            <Text>{this.props.screenProps.test.toString()}</Text>
           </View>
         </RkCard>
       </View>

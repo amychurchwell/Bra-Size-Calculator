@@ -52,10 +52,12 @@ const RootStack = StackNavigator(
 );
 
 export default class App extends React.Component {
-
+  constructor(props){
+    super(props);
+  }
   render() {
     return <RootStack
-            screenProps={{test: "test"}}/>;
+            screenProps={{test: "this is a test!"}}/>;
   }
 }
 

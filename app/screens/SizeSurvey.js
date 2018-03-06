@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, View, Text, TextInput, StyleSheet } from 'react-native';
-
 import {RkButton, RkTextInput} from 'react-native-ui-kitten';
+
 
 class SizeSurvey extends Component {
   constructor(props){

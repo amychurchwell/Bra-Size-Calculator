@@ -3,11 +3,9 @@ import {
   Platform,
   View,
   Text,
+  Animated,
   StyleSheet,
-  TextInput,
-  Image,
-  TouchableOpacity,
-  Button } from 'react-native';
+  Image } from 'react-native';
 
 import {RkButton} from 'react-native-ui-kitten';
 
