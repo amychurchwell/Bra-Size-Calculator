@@ -6,18 +6,22 @@ import {RkButton, RkTextInput} from 'react-native-ui-kitten';
 class SizeSurvey extends Component {
   constructor(props){
     super(props);
-    console.log(props);
-  }
+    console.log(props.screenProps.value);
+}
 
   render() {
     return (
       <View style={styles.container}>
-        <RkTextInput placeholder='Loose Underbust'/>
+        {/* <Text>{this.state.value}</Text> */}
+        <RkTextInput
+          placeholder='Loose Underbust'
+        />
         <RkTextInput placeholder='Snug Underbust'/>
         <RkTextInput placeholder='Tight Underbust'/>
         <RkButton
           style={styles.button}
-          onPress={() => this.props.navigation.navigate('Form2')}>
+          onPress={() => this.props.navigation.navigate('Form2')}
+          >
           Next!
         </RkButton>
       </View>
@@ -27,6 +31,7 @@ class SizeSurvey extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    padding: 10,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

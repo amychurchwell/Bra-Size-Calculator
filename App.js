@@ -54,10 +54,15 @@ const RootStack = StackNavigator(
 export default class App extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      value: "blep"
+    }
   }
+
   render() {
     return <RootStack
-            screenProps={{test: "this is a test!"}}/>;
+            screenProps={{...this.state}}
+          />;
   }
 }
 

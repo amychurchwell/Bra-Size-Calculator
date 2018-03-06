@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
 
-import {RkButton, RkTextInput} from 'react-native-ui-kitten';
+import {RkButton, RkTextInput, RkChoice} from 'react-native-ui-kitten';
 
 class SizeSurvey3 extends Component {
   constructor(props){
@@ -16,7 +16,6 @@ class SizeSurvey3 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <RkTextInput placeholder='Loose Underbust'/>
         <RkTextInput placeholder='Snug Underbust'/>
         <RkTextInput placeholder='Tight Underbust'/>
         <RkButton
@@ -30,6 +29,7 @@ class SizeSurvey3 extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    padding: 10,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

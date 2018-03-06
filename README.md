@@ -41,6 +41,10 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 Install XCODE for iOS simulator.
 
 ```
+$ npm install
+```
+
+```
 $ react-native run-ios
 ```
 
