@@ -55,7 +55,13 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      value: "blep"
+      value: "blep",
+      updateState:
+        updateState = () => {
+          this.setState({
+            value: "whoop"
+          });
+        }
     }
   }
 

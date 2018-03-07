@@ -5,7 +5,7 @@ import {RkButton, RkTextInput} from 'react-native-ui-kitten';
 class SizeSurvey2 extends Component {
     constructor(props){
       super(props);
-      console.log(props + "2");
+      console.log(props);
     }
 
   static navigationOptions = {
