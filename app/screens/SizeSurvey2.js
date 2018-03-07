@@ -15,6 +15,7 @@ class SizeSurvey2 extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text>{this.props.screenProps.value.toString()}</Text>
         <RkTextInput placeholder='Loose Underbust'/>
         <RkTextInput placeholder='Snug Underbust'/>
         <RkTextInput placeholder='Tight Underbust'/>

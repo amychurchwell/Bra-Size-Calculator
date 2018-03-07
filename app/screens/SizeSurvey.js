@@ -7,14 +7,15 @@ class SizeSurvey extends Component {
   constructor(props){
     super(props);
     console.log(props.screenProps.value);
-}
+  }
 
   render() {
     return (
       <View style={styles.container}>
-        {/* <Text>{this.state.value}</Text> */}
+        <Text>{this.props.screenProps.value.toString()}</Text>
         <RkTextInput
           placeholder='Loose Underbust'
+          onChangeText={(value) => this.setState({value})}
         />
         <RkTextInput placeholder='Snug Underbust'/>
         <RkTextInput placeholder='Tight Underbust'/>

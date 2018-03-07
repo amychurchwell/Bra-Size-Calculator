@@ -19,6 +19,7 @@ class Results extends Component {
 
     return (
       <View style={styles.container}>
+        <Text>{this.props.screenProps.value.toString()}</Text>
         <Image source={require('./../assets/bra.png')} />
         <RkCard style={styles.content}>
           <View rkCardHeader>
