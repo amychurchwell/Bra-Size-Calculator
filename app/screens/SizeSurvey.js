@@ -16,13 +16,11 @@ class SizeSurvey extends Component {
         <Text>{this.props.screenProps.cupSize.toString()}</Text>
         <RkTextInput
           value={this.props.screenProps.bandSize}
-          placeholder='Loose Underbust'
-          onChangeText={(text) => this.props.screenProps.updateState(text)}/>
-        <RkTextInput placeholder='Snug Underbust'/>
+          placeholder='Snug Underbust'
+          onChangeText={(text) => this.props.screenProps.setBand(text)}/>
+        <RkTextInput placeholder='Loose Underbust'/>
         <RkTextInput placeholder='Tight Underbust'/>
-        <RkButton
-          // onPress={() => {this.props.navigation.navigate('Form2')}}
-          onPress={() => {this.props.screenProps.calculateBand(33.6)}}>
+        <RkButton onPress={() => {this.props.navigation.navigate('Form2')}}>
           Next!
         </RkButton>
       </View>

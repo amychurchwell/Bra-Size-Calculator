@@ -58,12 +58,12 @@ export default class App extends React.Component {
       cupSize: "this is the cup size",
       bandSize: "this is the band size",
 
-      updateState:
-        updateState = (text) => {
+      setBand:
+        setBand = (text) => {
           this.setState({
             bandSize: text
           });
-          console.log(text);
+          calculateBand(text)
         },
 
       calculateCupSize:
