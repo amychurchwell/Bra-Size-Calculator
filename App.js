@@ -61,7 +61,22 @@ export default class App extends React.Component {
           this.setState({
             value: "whoop"
           });
+        },
+      calculateCupSize:
+      calculateCupSize = (leanB, standB, looseUB) => {
+        if ((leanB - standB) > 2.5){
+          let x = (leanB + standB + looseUB)/3
+          let cup = x - 31.5
+          console.log(cup + "avg calc")
+        }else{
+          let cup = leanB - 31.5
+          console.log(cup + "leanB calc")
         }
+      },
+      calculateBand:
+      calculateBand = (snugUB) => {
+        // round snug UB to nearest EVEN whole #
+      }
     }
   }
 
