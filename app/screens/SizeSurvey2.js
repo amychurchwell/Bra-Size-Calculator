@@ -15,8 +15,8 @@ class SizeSurvey2 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.screenProps.value.toString()}</Text>
         <Text>{this.props.screenProps.bandSize.toString()}</Text>
+        <Text>{this.props.screenProps.cupSize.toString()}</Text>
         <RkTextInput placeholder='Loose Underbust'/>
         <RkTextInput placeholder='Snug Underbust'/>
         <RkTextInput placeholder='Tight Underbust'/>

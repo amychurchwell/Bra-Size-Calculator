@@ -20,7 +20,7 @@ class SplashPage extends Component {
       <View style={styles.container}>
         <Image source={require('./../assets/bra.png')} />
         <Text style={styles.title}>Does your cup runneth over?</Text>
-        <Text style={styles.content}>Welcome to bra size calculator! A react native application created by Amy.</Text>
+        <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
         <RkButton
           onPress={() => this.props.navigation.navigate('Form')}>
           Let's go!
@@ -36,6 +36,7 @@ class SplashPage extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    padding: 10,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -44,14 +45,13 @@ const styles = StyleSheet.create({
       ios: { paddingTop: 30 }
     })
   },
-  content: {
-    flex: 1,
-  },
   title: {
-    fontSize: 35,
+    fontSize: 40,
+    textAlign: 'center'
   },
   content: {
     margin: 15,
+    fontSize: 20,
   }
 })
 

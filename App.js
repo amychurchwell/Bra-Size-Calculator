@@ -55,8 +55,7 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      value: "blep",
-      cupSize: "",
+      cupSize: "this is the cup size",
       bandSize: "this is the band size",
 
       updateState:
@@ -87,16 +86,16 @@ export default class App extends React.Component {
 
       calculateBand:
       calculateBand = (snugUB) => {
-        const roundedUp = Math.ceil(snugUb)
-        if(roundedUp % 2 === 0){
-          console.log(roundedUp)
+        console.log(snugUB)
+        let x = Math.ceil(snugUB)
+         if(x % 2 === 0){
           this.setState({
-            bandSize: roundedUp
+            bandSize: x
           })
         }else{
-          console.log(roundedUp + 1)
+          console.log(x + 1)
           this.setState({
-            bandSize: roundedUp + 1
+            bandSize: x + 1
           })
         }
       }

@@ -19,14 +19,14 @@ class Results extends Component {
 
     return (
       <View style={styles.container}>
-        <Text>{this.props.screenProps.value.toString()}</Text>
         <Image source={require('./../assets/bra.png')} />
         <RkCard style={styles.content}>
           <View rkCardHeader>
             <Text style={styles.title}>Your suggested size:</Text>
           </View>
           <View rkCardContent>
-            {/* <Text style={styles.size}>{this.props.screenProps.test.toString()}</Text> */}
+            <Text>{this.props.screenProps.bandSize.toString()}</Text>
+            <Text>{this.props.screenProps.cupSize.toString()}</Text>
           </View>
         </RkCard>
       </View>
