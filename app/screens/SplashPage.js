@@ -19,7 +19,7 @@ class SplashPage extends Component {
     return (
       <View style={styles.container}>
         <Image source={require('./../assets/bra.png')} />
-        <Text style={styles.title}>I need help finding out my bra size.</Text>
+        <Text style={styles.title}>Does your cup runneth over?</Text>
         <Text style={styles.content}>Welcome to bra size calculator! A react native application created by Amy.</Text>
         <RkButton
           onPress={() => this.props.navigation.navigate('Form')}>
