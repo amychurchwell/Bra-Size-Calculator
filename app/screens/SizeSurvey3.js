@@ -6,7 +6,6 @@ import {RkButton, RkTextInput, RkChoice} from 'react-native-ui-kitten';
 class SizeSurvey3 extends Component {
   constructor(props){
     super(props);
-    console.log(props + "3");
   }
 
   static navigationOptions = {
@@ -18,8 +17,6 @@ class SizeSurvey3 extends Component {
       <View style={styles.container}>
         <Text>{this.props.screenProps.bandSize.toString()}</Text>
         <Text>{this.props.screenProps.cupSize.toString()}</Text>
-        <RkTextInput placeholder='Snug Underbust'/>
-        <RkTextInput placeholder='Tight Underbust'/>
         <RkButton
           onPress={() => this.props.navigation.navigate('Results')}>
           Submit!

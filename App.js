@@ -57,6 +57,9 @@ export default class App extends React.Component {
     this.state = {
       cupSize: "this is the cup size",
       bandSize: "this is the band size",
+      standB: "standing bust",
+      leanB: "leaning bust",
+      looseUB: "loose underbust",
 
       setBand:
         setBand = (text) => {
@@ -66,48 +69,74 @@ export default class App extends React.Component {
           calculateBand(text)
         },
 
-      calculateCupSize:
-      calculateCupSize = (leanB, standB, looseUB) => {
-        if ((leanB - standB) > 2.5){
-          let x = (leanB + standB + looseUB)/3
-          let cup = x - 31.5
-          console.log(cup + "avg calc")
-          this.setState({
-            cupSize: cup
-          })
-        }else{
-          let cup = leanB - 31.5
-          console.log(cup + "leanB calc")
-          this.setState({
-            cupSize: cup
-          })
-        }
-      },
+        setLooseUB:
+          setLooseUB = (x) => {
+            this.setState({
+              looseUB: x
+            });
+          },
 
-      calculateBand:
-      calculateBand = (snugUB) => {
-        console.log(snugUB)
-        let x = Math.ceil(snugUB)
-         if(x % 2 === 0){
-          this.setState({
-            bandSize: x
-          })
-        }else{
-          console.log(x + 1)
-          this.setState({
-            bandSize: x + 1
-          })
+        setLeanB:
+          setLeanB = (x) => {
+            this.setState({
+              leanB: x
+            });
+          },
+
+        setStandB:
+          setStandB = (x) => {
+            this.setState({
+              standB: x
+            });
+          },
+
+        calculateCupSize:
+        calculateCupSize = () => {
+
+          let leanBust = this.state.leanB;
+          let standBust = this.state.standB;
+          let looseUnderBust = this.state.looseUB;
+
+          if ((leanBust - standBust) > 2.5){
+            let x = (leanBust + standBust + looseUnderBust)/3
+            let cup = x - 31.5
+            console.log(cup + "avg calc")
+            this.setState({
+              cupSize: cup
+            })
+          }else{
+            let cup = leanBust - 31.5
+            console.log(cup + "leanB calc")
+            this.setState({
+              cupSize: cup
+            })
+          }
+        },
+
+        calculateBand:
+        calculateBand = (snugUB) => {
+          console.log(snugUB)
+          let x = Math.ceil(snugUB)
+           if(x % 2 === 0){
+            this.setState({
+              bandSize: x
+            })
+          }else{
+            console.log(x + 1)
+            this.setState({
+              bandSize: x + 1
+            })
+          }
         }
       }
     }
-  }
 
-  render() {
-    return <RootStack
-            screenProps={{...this.state}}
-          />;
+    render() {
+      return <RootStack
+              screenProps={{...this.state}}
+            />;
+    }
   }
-}
 
 const styles = StyleSheet.create({
   container: {

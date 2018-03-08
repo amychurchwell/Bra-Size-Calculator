@@ -5,7 +5,6 @@ import {RkButton, RkTextInput} from 'react-native-ui-kitten';
 class SizeSurvey2 extends Component {
     constructor(props){
       super(props);
-      console.log(props);
     }
 
   static navigationOptions = {
@@ -15,14 +14,25 @@ class SizeSurvey2 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.screenProps.bandSize.toString()}</Text>
+        <Text>{this.props.screenProps.standB.toString()}</Text>
+        <Text>{this.props.screenProps.leanB.toString()}</Text>
+        <Text>{this.props.screenProps.looseUB.toString()}</Text>
         <Text>{this.props.screenProps.cupSize.toString()}</Text>
-        <RkTextInput placeholder='Loose Underbust'/>
-        <RkTextInput placeholder='Snug Underbust'/>
-        <RkTextInput placeholder='Tight Underbust'/>
-        <RkButton
-          onPress={() => this.props.navigation.navigate('Form3')}>
+        <RkTextInput
+          placeholder='Standing Bust'
+          value={this.props.screenProps.standB}
+          onChangeText={(text) => this.props.screenProps.setStandB(text)}
+        />
+        <RkTextInput
+          placeholder='Leaning Bust'
+          value={this.props.screenProps.leanB}
+          onChangeText={(text) => this.props.screenProps.setLeanB(text)}
+        />
+        <RkButton onPress={() => {this.props.navigation.navigate('Form3')}}>
           Next!
+        </RkButton>
+        <RkButton onPress={() => {this.props.screenProps.calculateCupSize()}}>
+          Calculate!
         </RkButton>
       </View>
     )
