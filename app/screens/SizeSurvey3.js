@@ -15,8 +15,7 @@ class SizeSurvey3 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.screenProps.bandSize.toString()}</Text>
-        <Text>{this.props.screenProps.cupSize.toString()}</Text>
+        <Text>More questions.</Text>
         <RkButton
           onPress={() => this.props.navigation.navigate('Results')}>
           Submit!

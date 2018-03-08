@@ -17,32 +17,29 @@ class SplashPage extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Image source={require('./../assets/bra.png')} />
-        <Text style={styles.title}>Does your cup runneth over?</Text>
-        <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
-        <RkButton
-          onPress={() => this.props.navigation.navigate('Form')}>
-          Let's go!
-        </RkButton>
-        <RkButton
-          onPress={() => this.props.navigation.navigate('Results')}>
-          Results.
-        </RkButton>
-      </View>
+        <View style={styles.container}>
+          <Image  style={styles.titlelogo} source={require('./../assets/logo1.gif')} resizeMode='contain'/>
+          <Image source={require('./../assets/bra.png')} />
+          <Text style={styles.title}>Does your cup runneth over?</Text>
+          <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
+          <RkButton
+            onPress={() => this.props.navigation.navigate('Form')}>
+            Let's go!
+          </RkButton>
+        </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
-    flex: 1,
+    padding: 15,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fbe9e7',
     ...Platform.select({
-      ios: { paddingTop: 30 }
+      ios: { paddingTop: 15 }
     })
   },
   title: {
@@ -50,9 +47,12 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   content: {
-    margin: 15,
+    margin: 25,
     fontSize: 20,
-  }
-})
+  },
+  titlelogo: {
+    marginBottom: 20,
+  },
+});
 
 export default SplashPage;

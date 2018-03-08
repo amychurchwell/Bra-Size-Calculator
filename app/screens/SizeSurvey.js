@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, TextInput, StyleSheet } from 'react-native';
+import { Platform, View, Text, TextInput, StyleSheet, Image } from 'react-native';
 import {RkButton, RkTextInput} from 'react-native-ui-kitten';
 
 
@@ -11,15 +11,12 @@ class SizeSurvey extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.screenProps.bandSize.toString()}</Text>
-        <Text>{this.props.screenProps.cupSize.toString()}</Text>
+        <Image source={require('./../assets/measuring-tape.png')}/>
         <RkTextInput
-          value={this.props.screenProps.bandSize}
           placeholder='Snug Underbust'
           onChangeText={(text) => this.props.screenProps.setBand(text)}/>
         <RkTextInput
           placeholder='Loose Underbust'
-          value={this.props.screenProps.looseUB}
           onChangeText={(text) => this.props.screenProps.setLooseUB(text)}
         />
         {/* <RkTextInput placeholder='Tight Underbust'/> */}

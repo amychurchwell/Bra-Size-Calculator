@@ -6,7 +6,7 @@ import {
   StyleSheet,
   Image } from 'react-native';
 
-import {RkCard} from 'react-native-ui-kitten';
+import {RkCard, RkButton} from 'react-native-ui-kitten';
 
 class Results extends Component {
     constructor(props){
@@ -22,8 +22,7 @@ class Results extends Component {
         <Text style={styles.title}>Your suggested size:</Text>
         <RkCard style={styles.content}>
           <View rkCardContent>
-            <Text style={styles.size}>{this.props.screenProps.bandSize.toString()}</Text>
-            <Text style={styles.size}>{this.props.screenProps.cupSize.toString()}</Text>
+            <Text style={styles.size}>{this.props.screenProps.bandSize.toString()}{this.props.screenProps.cupSize.toString()}</Text>
           </View>
         </RkCard>
       </View>
