@@ -87,6 +87,7 @@ export default class App extends React.Component {
       standB: "standing bust",
       leanB: "leaning bust",
       looseUB: "loose underbust",
+      lyingB: "lying bust",
 
       setBand:
         setBand = (text) => {
@@ -117,21 +118,36 @@ export default class App extends React.Component {
             });
           },
 
+        setLyingB:
+          setLyingB = (x) => {
+            this.setState({
+              lyingB: x
+            });
+          },
+
+        //USE AVERAGE ERROR.
+        // Difference greater than 2.5 between Leaning and Standing bust measurements.
+
         calculateCupSize:
         calculateCupSize = () => {
 
           let leanBust = this.state.leanB;
           let standBust = this.state.standB;
           let looseUnderBust = this.state.looseUB;
-//Remove math.ceil for more accuracy later
+          let lyingBust = this.state.lyingB;
+
+          //Remove math.ceil for more accuracy later
+
           if ((leanBust - standBust) > 2.5){
-            let x = (leanBust + standBust + looseUnderBust)/3
-            let cup = Math.ceil(x - 31.5);;
+            let x = (parseInt(leanBust) + parseInt(standBust) + parseInt(looseUnderBust))/3
+            let cup = Math.ceil(x - 31.5);
+            console.log("using average, cup: " + cup + " and x: " + x)
             this.setState({
               cupSize: cupChart[cup]
             })
           }else{
             let cup = Math.ceil(leanBust - 31.5);
+            console.log("use leaning bust.")
             this.setState({
               cupSize: cupChart[cup]
             })
@@ -140,14 +156,12 @@ export default class App extends React.Component {
 
         calculateBand:
         calculateBand = (snugUB) => {
-          console.log(snugUB)
           let x = Math.ceil(snugUB)
            if(x % 2 === 0){
             this.setState({
               bandSize: x
             })
           }else{
-            console.log(x + 1)
             this.setState({
               bandSize: x + 1
             })

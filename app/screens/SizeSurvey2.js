@@ -15,12 +15,16 @@ class SizeSurvey2 extends Component {
     return (
       <View style={styles.container}>
         <RkTextInput
-          placeholder='Standing Bust'
+          placeholder='Standing Bust, AKA Step 4.'
           onChangeText={(text) => this.props.screenProps.setStandB(text)}
         />
         <RkTextInput
-          placeholder='Leaning Bust'
+          placeholder='Leaning Bust, AKA Step 5.'
           onChangeText={(text) => this.props.screenProps.setLeanB(text)}
+        />
+        <RkTextInput
+          placeholder='Lying Bust, AKA Step 6.'
+          onChangeText={(text) => this.props.screenProps.setLyingB(text)}
         />
         <RkButton onPress={() => {this.props.navigation.navigate('Results')}}>
           Next!

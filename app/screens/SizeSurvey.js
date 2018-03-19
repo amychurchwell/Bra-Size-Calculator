@@ -16,7 +16,7 @@ class SizeSurvey extends Component {
           placeholder='Snug Underbust'
           onChangeText={(text) => this.props.screenProps.setBand(text)}/>
         <RkTextInput
-          placeholder='Loose Underbust'
+          placeholder='Loose Underbust. AKA Step1'
           onChangeText={(text) => this.props.screenProps.setLooseUB(text)}
         />
         {/* <RkTextInput placeholder='Tight Underbust'/> */}
