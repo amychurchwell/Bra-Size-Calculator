@@ -50,9 +50,9 @@ $ react-native run-ios
 
 ## Layout
 
-![landing page](https://raw.githubusercontent.com/amychurchwell/Bra-Size-Calculator/master/app/assets/landingpage_mockup.png)
+:pushpin: **v.3** new IOS view coming soon.
 
-:pushpin: **v.2**: Utilized Adobe XD to create more detailed layout views.
+**v.2**: Utilized Adobe XD to create more detailed layout views.
 
 **v.1**: /Brands is color-coded yellow because it is a stretch goal feature. Consideration for more stretch goal features such as brands and saving results will happen once MVP is reached.
 
