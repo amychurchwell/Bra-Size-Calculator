@@ -8,6 +8,8 @@ target 'BSC' do
 
   # Pods for BSC
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'BSCTests' do
     inherit! :search_paths
     # Pods for testing
