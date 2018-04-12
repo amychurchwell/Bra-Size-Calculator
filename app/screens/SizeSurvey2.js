@@ -29,9 +29,6 @@ class SizeSurvey2 extends Component {
         <RkButton onPress={() => {this.props.navigation.navigate('Results')}}>
           Next!
         </RkButton>
-        <RkButton onPress={() => {this.props.screenProps.calculateCupSize()}}>
-          Calculate!
-        </RkButton>
       </View>
     )
   }

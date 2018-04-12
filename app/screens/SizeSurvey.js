@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Platform, View, Text, TextInput, StyleSheet, Image } from 'react-native';
 import {RkButton, RkTextInput} from 'react-native-ui-kitten';
 
+import { Button } from 'react-native-elements';
+
 
 class SizeSurvey extends Component {
   constructor(props){
@@ -20,9 +22,9 @@ class SizeSurvey extends Component {
           onChangeText={(text) => this.props.screenProps.setLooseUB(text)}
         />
         {/* <RkTextInput placeholder='Tight Underbust'/> */}
-        <RkButton onPress={() => {this.props.navigation.navigate('Form2')}}>
+        <Button onPress={() => {this.props.navigation.navigate('Form2')}}>
           Next!
-        </RkButton>
+        </Button>
       </View>
     )
   }

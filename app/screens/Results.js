@@ -13,6 +13,8 @@ class Results extends Component {
       super(props);
     }
 
+  // componentDidMount(calculateCupSize());
+
   render() {
     const { navigate } = this.props.navigation;
 
@@ -23,6 +25,9 @@ class Results extends Component {
         <RkCard style={styles.content}>
           <View rkCardContent>
             <Text style={styles.size}>{this.props.screenProps.bandSize.toString()}{this.props.screenProps.cupSize.toString()}</Text>
+            <RkButton onPress={() => {this.props.screenProps.calculateCupSize()}}>
+              Calculate!
+            </RkButton>
           </View>
         </RkCard>
       </View>
