@@ -8,8 +8,6 @@ import {
 
 import { Container, Header, Content, Button, Text } from 'native-base';
 
-import {RkButton} from 'react-native-ui-kitten';
-
 class SplashPage extends Component {
   static navigationOptions = {
     title: 'Home',
