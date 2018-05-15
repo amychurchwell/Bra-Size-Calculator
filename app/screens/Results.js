@@ -22,9 +22,6 @@ class Results extends Component {
         <Image source={require('./../assets/bra.png')} />
         <Text style={styles.title}>Your suggested size:</Text>
           <Text style={styles.size}>{this.props.screenProps.bandSize.toString()}{this.props.screenProps.cupSize.toString()}</Text>
-          <Button dark onPress={() => {this.props.screenProps.calculateCupSize()}}>
-            <Text>Calculate!</Text>
-          </Button>
       </View>
     )
   }
