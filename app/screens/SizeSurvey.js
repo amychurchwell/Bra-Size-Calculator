@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, TextInput, StyleSheet, Image } from 'react-native';
-import {RkButton, RkTextInput} from 'react-native-ui-kitten';
+import { Platform, View, StyleSheet, Image } from 'react-native';
 
-import { Button } from 'react-native-elements';
+import { Container, Header, Content, Button, Text, Form, Item, Input, Label } from 'native-base';
 
 
 class SizeSurvey extends Component {
@@ -12,19 +11,21 @@ class SizeSurvey extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Image source={require('./../assets/measuring-tape.png')}/>
-        <RkTextInput
-          placeholder='Snug Underbust'
-          onChangeText={(text) => this.props.screenProps.setBand(text)}/>
-        <RkTextInput
-          placeholder='Loose Underbust. AKA Step1'
-          onChangeText={(text) => this.props.screenProps.setLooseUB(text)}
-        />
-        {/* <RkTextInput placeholder='Tight Underbust'/> */}
-        <Button onPress={() => {this.props.navigation.navigate('Form2')}}>
-          Next!
-        </Button>
+        <Form>
+          <Item floatingLabel>
+            <Label>Snug Underbust.</Label>
+            <Input onChangeText={(text) => this.props.screenProps.setBand(text)}/>
+          </Item>
+          <Item floatingLabel last>
+            <Label>Loose Underbust. AKA Step1.</Label>
+            <Input onChangeText={(text) => this.props.screenProps.setLooseUB(text)}/>
+          </Item>
+          <Button dark onPress={() => {this.props.navigation.navigate('Form2')}}>
+            <Text>Next!</Text>
+          </Button>
+        </Form>
       </View>
     )
   }

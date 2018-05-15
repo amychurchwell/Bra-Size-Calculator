@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Platform, View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
-
-import {RkButton, RkTextInput, RkChoice} from 'react-native-ui-kitten';
+import { Platform, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Container, Header, Content, Button, Text } from 'native-base';
 
 class SizeSurvey3 extends Component {
   constructor(props){
@@ -14,12 +13,12 @@ class SizeSurvey3 extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Text>More questions.</Text>
-        <RkButton
+        <Button dark
           onPress={() => this.props.navigation.navigate('Results')}>
-          Submit!
-        </RkButton>
+          <Text>Submit!</Text>
+        </Button>
       </View>
     )
   }

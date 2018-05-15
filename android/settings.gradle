@@ -1,6 +1,8 @@
 rootProject.name = 'BSC'
 include ':react-native-vector-icons'
 project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 include ':react-native-spruce'
 project(':react-native-spruce').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-spruce/android')
 
