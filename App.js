@@ -79,7 +79,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       cupSize: "cup",
-      bandSize: "band",
+      bandSize: 'measurements',
       standB: 35,
       leanB: 40,
       looseUB: 31.5,

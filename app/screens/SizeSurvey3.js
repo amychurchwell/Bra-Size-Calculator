@@ -15,7 +15,7 @@ class SizeSurvey3 extends Component {
     return (
       <View>
         <Text>More questions.</Text>
-        <Button dark
+        <Button full dark
           onPress={() => this.props.navigation.navigate('Results')}>
           <Text>Submit!</Text>
         </Button>

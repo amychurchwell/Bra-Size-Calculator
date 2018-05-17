@@ -17,22 +17,17 @@ class SplashPage extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-        <Container>
-          <Content>
-            <Grid>
-              <Col>
-                <Image  style={styles.titlelogo} source={require('./../assets/logo1.gif')} resizeMode='contain'/>
-                <Image source={require('./../assets/bra.png')} />
-                <Text style={styles.title}>Does your cup runneth over?</Text>
-                <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
-                <Button dark
-                  onPress={() => this.props.navigation.navigate('Form')}>
-                  <Text>Let's go!</Text>
-                </Button>
-              </Col>
-            </Grid>
-          </Content>
-        </Container>
+        <View style={styles.container}>
+          <Image  style={styles.titlelogo} source={require('./../assets/logo1.gif')} resizeMode='contain'/>
+          <Image source={require('./../assets/bra.png')} />
+          <Text style={styles.title}>Does your cup runneth over?</Text>
+          <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
+          <Button full dark
+            style={styles.content}
+            onPress={() => this.props.navigation.navigate('Form')}>
+            <Text>Let's go!</Text>
+          </Button>
+        </View>
     )
   }
 }
