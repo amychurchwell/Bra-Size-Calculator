@@ -7,6 +7,7 @@ import {
   Image } from 'react-native';
 
 import { Container, Header, Content, Button, Text } from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 class SplashPage extends Component {
   static navigationOptions = {
@@ -16,16 +17,22 @@ class SplashPage extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-        <View>
-          <Image  style={styles.titlelogo} source={require('./../assets/logo1.gif')} resizeMode='contain'/>
-          <Image source={require('./../assets/bra.png')} />
-          <Text style={styles.title}>Does your cup runneth over?</Text>
-          <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
-          <Button dark
-            onPress={() => this.props.navigation.navigate('Form')}>
-            <Text>Let's go!</Text>
-          </Button>
-        </View>
+        <Container>
+          <Content>
+            <Grid>
+              <Col>
+                <Image  style={styles.titlelogo} source={require('./../assets/logo1.gif')} resizeMode='contain'/>
+                <Image source={require('./../assets/bra.png')} />
+                <Text style={styles.title}>Does your cup runneth over?</Text>
+                <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
+                <Button dark
+                  onPress={() => this.props.navigation.navigate('Form')}>
+                  <Text>Let's go!</Text>
+                </Button>
+              </Col>
+            </Grid>
+          </Content>
+        </Container>
     )
   }
 }

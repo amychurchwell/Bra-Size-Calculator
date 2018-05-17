@@ -84,7 +84,6 @@ $ react-native run-ios
 ## Technology
 
 * This project was bootstrapped with React Native CLI.
-* Styled with [react-native-ui-kitten](https://github.com/akveo/react-native-ui-kitten) :cat:
 
 
 ## Special Thanks

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Platform, View, StyleSheet } from 'react-native';
 import { Container, Header, Content, Button, Text } from 'native-base';
 
 class SizeSurvey3 extends Component {
