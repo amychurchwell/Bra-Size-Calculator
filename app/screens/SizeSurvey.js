@@ -12,7 +12,10 @@ class SizeSurvey extends Component {
   render() {
     return (
       <View>
-        <Image source={require('./../assets/measuring-tape.png')}/>
+        <Content>
+          <Image
+            source={require('./../assets/measuring-tape.png')}/>
+        </Content>
         <Form>
           <Item floatingLabel>
             <Label>Snug Underbust.</Label>

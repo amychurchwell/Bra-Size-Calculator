@@ -18,7 +18,7 @@ class SplashPage extends Component {
     const { navigate } = this.props.navigation;
     return (
         <View style={styles.container}>
-          <Image  style={styles.titlelogo} source={require('./../assets/logo1.gif')} resizeMode='contain'/>
+          <Image style={styles.titlelogo} source={require('./../assets/logo1.gif')} resizeMode='contain'/>
           <Image source={require('./../assets/bra.png')} />
           <Text style={styles.title}>Does your cup runneth over?</Text>
           <Text style={styles.content}>Hello and welcome to bra size calculator! A react native application created by Amy.</Text>
