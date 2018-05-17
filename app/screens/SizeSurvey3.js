@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Platform, View, StyleSheet } from 'react-native';
 import { Container, Header, Content, Button, Text } from 'native-base';
 
 class SizeSurvey3 extends Component {
@@ -15,7 +15,7 @@ class SizeSurvey3 extends Component {
     return (
       <View>
         <Text>More questions.</Text>
-        <Button dark
+        <Button full dark
           onPress={() => this.props.navigation.navigate('Results')}>
           <Text>Submit!</Text>
         </Button>

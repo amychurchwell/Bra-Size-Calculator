@@ -23,6 +23,8 @@ import SizeSurvey2 from "./app/screens/SizeSurvey2";
 import SizeSurvey3 from "./app/screens/SizeSurvey3";
 import Results from "./app/screens/Results";
 
+console.disableYellowBox = true;
+
 const RootStack = StackNavigator(
   {
     Home: {
@@ -77,11 +79,11 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       cupSize: "cup",
-      bandSize: "band",
-      standB: "standing bust",
-      leanB: "leaning bust",
-      looseUB: "loose underbust",
-      lyingB: "lying bust",
+      bandSize: 'measurements',
+      standB: 35,
+      leanB: 40,
+      looseUB: 31.5,
+      lyingB: 38.5,
 
       setBand:
         setBand = (text) => {

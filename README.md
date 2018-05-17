@@ -1,7 +1,7 @@
 # Bra Size Calculator
 :bikini: React Capstone, _Epicodus_.
 
-Amy Churchwell Feb. 23 - 2018.
+Amy Churchwell Feb. 2018.
 
 :email: amy.churchwell@gmail.com
 
@@ -66,25 +66,10 @@ $ react-native run-ios
 
 **v.1**: Components that require state have been highlighted in red. This tree will be edited going forward, something tells me it's a little off.
 
-## Process
-
-**3/2/18:** I believe this project will be more impactful as a react-native application. This morning I am finishing a native todo list tutorial: [project repo](https://github.com/amychurchwell/React-Native-Todo)
-
-**Static Version**. A static version of site structure utilizing only functional components, hard-coding any data later received from an API.
-
-**Minimum Representation of UI State**.
-
-**Lifting State.**
-
-**Inverse Data Flow.**
-
-## Known Bugs
-
-
 ## Technology
 
 * This project was bootstrapped with React Native CLI.
-* Styled with [react-native-ui-kitten](https://github.com/akveo/react-native-ui-kitten) :cat:
+* Utilizing Native Base for UI.
 
 
 ## Special Thanks

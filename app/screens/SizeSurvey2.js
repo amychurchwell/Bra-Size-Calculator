@@ -28,7 +28,7 @@ class SizeSurvey2 extends Component {
             <Label>Lying Bust, AKA Step 6.</Label>
             <Input onChangeText={(text) => this.props.screenProps.setLyingB(text)}/>
           </Item>
-          <Button dark
+          <Button full dark
             onPress={() => {this.props.navigation.navigate('Results')}}
             onPressOut={() => {this.props.screenProps.calculateCupSize()}}
             >

@@ -22,7 +22,8 @@ class SizeSurvey extends Component {
             <Label>Loose Underbust. AKA Step1.</Label>
             <Input onChangeText={(text) => this.props.screenProps.setLooseUB(text)}/>
           </Item>
-          <Button dark onPress={() => {this.props.navigation.navigate('Form2')}}>
+          <Button full dark
+            onPress={() => {this.props.navigation.navigate('Form2')}}>
             <Text>Next!</Text>
           </Button>
         </Form>
